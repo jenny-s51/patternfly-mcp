@@ -1,0 +1,56 @@
+{
+  "name": "@jephilli-patternfly-docs/mcp",
+  "version": "1.0.0",
+  "description": "PatternFly documentation MCP server built with Node.js and TypeScript",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "patternfly-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    ".pf-ai-documentation/**/*",
+    "README.md",
+    "mcp-config-example.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "typescript",
+    "nodejs",
+    "patternfly",
+    "documentation",
+    "react"
+  ],
+  "author": "Jeff Phillips",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeff-phillips-18/patternfly-mcp.git"
+  },
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/jeff-phillips-18/patternfly-mcp/issues"
+  },
+  "homepage": "https://github.com/jeff-phillips-18/patternfly-mcp#readme"
+}
