@@ -120,12 +120,12 @@ For local development (without npx):
 
 #### usePatternFlyDocs
 ```
-npx @modelcontextprotocol/inspector-cli --config /Users/jeffreyphillips/.cursor/mcp.json --server patternfly-mcp-server --cli --method tools/call --tool-name usePatternFlyDocs --tool-arg urlList='["/Users/jeffreyphillips/repositories/patternfly-mcp/documentation/chatbot/README.md"]'
+npx @modelcontextprotocol/inspector-cli --config ~/.cursor/mcp.json --server patternfly-mcp-server --cli --method tools/call --tool-name usePatternFlyDocs --tool-arg urlList='["<path to patternfly-mcp>/documentation/chatbot/README.md"]'
 ```
 
 #### fetchDocs
 ```
-npx @modelcontextprotocol/inspector-cli --config /Users/jeffreyphillips/.cursor/mcp.json --server patternfly-mcp-server --cli --method tools/call --tool-name fetchDocs --tool-arg urls='["https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/design-guidelines/components/about-modal/about-modal.md", "https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/accessibility/components/about-modal/about-modal.md"]'
+npx @modelcontextprotocol/inspector-cli --config ~/.cursor/mcp.json --server patternfly-mcp-server --cli --method tools/call --tool-name fetchDocs --tool-arg urls='["https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/design-guidelines/components/about-modal/about-modal.md", "https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/accessibility/components/about-modal/about-modal.md"]'
 ```
 
 ## Documentation Structure
