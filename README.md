@@ -10,8 +10,10 @@ The Model Context Protocol (MCP) is an open standard that enables AI assistants 
 
 - **TypeScript**: Full type safety and modern JavaScript features
 - **PatternFly Documentation Access**: Browse, search, and retrieve PatternFly development rules
+- **Component Schemas**: Access JSON Schema validation for all 462+ PatternFly React components
 - **Comprehensive Rule Coverage**: Access setup, guidelines, components, charts, chatbot, and troubleshooting documentation
 - **Smart Search**: Find specific rules and patterns across all documentation
+- **AI-Friendly**: Structured data perfect for AI assistants and code generation
 - **Error Handling**: Robust error handling with proper MCP error codes
 - **Modern Node.js**: Uses ES modules and the latest Node.js features
 
@@ -192,6 +194,31 @@ npx @modelcontextprotocol/inspector-cli \
     "https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/design-guidelines/components/about-modal/about-modal.md",
     "https://raw.githubusercontent.com/patternfly/patternfly-org/refs/heads/main/packages/documentation-site/patternfly-docs/content/accessibility/components/about-modal/about-modal.md"
   ]'
+```
+
+component-schemas (list all components):
+
+```bash
+npx @modelcontextprotocol/inspector-cli \
+  --config ./mcp-config.json \
+  --server patternfly-docs \
+  --cli \
+  --method tools/call \
+  --tool-name component-schemas \
+  --tool-arg action='list'
+```
+
+component-schemas (get specific component schema):
+
+```bash
+npx @modelcontextprotocol/inspector-cli \
+  --config ./mcp-config.json \
+  --server patternfly-docs \
+  --cli \
+  --method tools/call \
+  --tool-name component-schemas \
+  --tool-arg action='get' \
+  --tool-arg componentName='Button'
 ```
 
 ## Environment variables
